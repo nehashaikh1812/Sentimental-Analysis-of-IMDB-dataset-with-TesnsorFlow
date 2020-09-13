@@ -1,1 +1,6 @@
-# Sentimental-Analysis-of-IMDB-dataset-with-TesnsorFlow
+# Sentimental Analysis of IMDB dataset with TesnsorFlow
+
+I built and trained a neural network model to classify movie reviews taken from IMDB as either a positive review or a negative review. Essentially, the model, if given a text review, will be able to predict if the overall sentiment of the review is more negative or more positive.
+
+The IMDB dataset is easily accessible in Keras. Once the data is loaded, the training and test sets are populated with 25,000 examples each.
+I have used a bag of words that constitutes the most common 10,000 words only. First, we look at how these reviews can be decoded from their numerical representations to human-readable form. After that, the reviews are padded, meaning, stopwords like 'a', 'an', 'the' etc. are added to the word vectors corresponding to movie reviews so that length of each of these vecrors is same. This is followed by creating the embedding layer that tries to learn a specific number of features from the different reviews we have in our dataset. Each word will have a feature representation of n values, where n = number of features. After this I created and trained the neural network model with an activation function that ouputs one of the two values- positive and negative. Finally, I use the model for predicting sentiment labels, followed by performance evaluation. The model clearly overfits and will need some regularization.
